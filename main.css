@@ -1,9 +1,13 @@
-.header{
+
+#header{
     height: 170px;
     
  
 }
 /*header with search*/
+.menu{
+    display: none;
+}
 .header-wwith-search{
     height: 80px;
     display: flex;
@@ -11,15 +15,15 @@
 
 }
 .header-logo{
-    width: 250px;
+    width: 17%;
 }
 .header-logo-img{
-    width: 200px;
+    width: 75%;
     margin-left: 20px;
 }
 .header-search{
     background-color: #f7f7f7;
-    width:1000px;
+    width:75%;
     height: 33px;
     border-radius: 20px ;
     display: flex;
@@ -37,11 +41,9 @@
 .header-search-icon{
    width: 30px;
 }
-
-
 /*cart*/
 .header-cart{
-    width: 100px;
+    width: 7%;
     display: flex;
     justify-content: center;
     height: 33px;
@@ -79,14 +81,14 @@
     background-color: rgb(73, 72, 72);
     color: white;
     padding:  0px 6px 0px 6px;
-    border-radius: 50%;
-    
-    
+    border-radius: 50%;  
 }
-
 /*header with navbar*/
-.header-nav{
-    height: 110px;
+.turnoff{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: larger;
 }
 .header-nav-list{
     width: 100%;
@@ -96,7 +98,7 @@
 }
 .header-nav-item,.header-nav-item-strong {
     list-style: none;
-    width: 120px;
+    padding: 0 17px;
     position: relative;
     opacity: 0.6;
     display: flex;
@@ -114,10 +116,6 @@
 .header-nav-item-strong:hover{
     opacity: 1.6;
     cursor: pointer;
-}
-.header-nav-item-strong{
-    display: inline-flex;
-    justify-content: space-evenly;
 }
 .header-nav-item::after{
     width: 1px;
@@ -141,7 +139,18 @@
     background-image: linear-gradient(0, #ffffff,#ebebeb);
     
 }
+.fa-user-tie{
+    margin: 0 3px;
+}
+.signout{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 /*brand*/
+.header-brandrespon{
+    display: none;
+}
 .header-brand{
     position: absolute;
     width: 320px;
@@ -169,7 +178,6 @@
 }
 .header-brand::before {
     content: "";
-    
     border: 10px solid ;
     border-style: solid;
     border-color: transparent transparent #c3c3c3 transparent;
@@ -220,99 +228,7 @@
 }
 
 /* container */
-
 /* cover */
-.coverimg1{
-    width: 1332px;
-  
-    margin-bottom: 90px;
-    margin-right: 8px;
-}
-.cover2{
-    display: flex;
-    justify-content: space-around;
-    margin-left: 10px;
-}
-.coverimg2-1{
-    width: 645px;
-}
-.coverimg3-1  {
-    width: 645px;
-    margin-bottom: 10px;
-}
-.cover3{
-    margin-left: 20px;
-}
-
-.coverimg3-2{
-    width: 645px;
-}
-.coverimg4{
-    width: 1332px;
-    margin-top: 40px;
-    margin-right: 8px;
-    margin-bottom: 90px;
-}
-
-/* product */
-.product-title{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 20px ;
-}
-.grid{
-    width: 1330px;
-    margin: auto;
-    width: 100%;
-}
-.grid-row{
-    display: flex;
-    margin-left: 12px;
-    margin-right: 12px;
-    
-}
-.grid-column{
-    padding-left: 12px;
-    padding-right: 12px;
-    width: 20%;
-    
-}
-/* product item */
-.product-home{
-    width: 100%;
-    border: 1px solid #c3c3c3 ;
-    border-radius: 5px;
-}
-.product-name:hover{
-    opacity: 0.7;
-    cursor: pointer;
-
-}
-.product-img{
-    width: 230px;
-    padding-left: 2.5%;
-    
-}
-.product-name{
-    padding-left: 10px;
-    font-weight: 4px;
-}
-.product-price{
-    padding-left: 10px;
-}
-.product-priceold{
-    text-decoration-line: line-through;
-    opacity: 0.6;
-}
-.product-pricenew{
-    padding-left: 10px;
-}
-.product-star{
-     padding-top: 10px;
-     padding-left: 124px;
-     color: rgb(235, 188, 100);
-}
 
 /* -----------Cart------------- */
 .cartactive{
@@ -327,7 +243,7 @@
     top: 4%;
     background-color: #c3c3c3;
     border-radius: 10px; 
-    display: none;
+    
 }
 .cartactive::before {
     content: "";
@@ -367,10 +283,26 @@
     padding: 12px 0 ;
 }
 .thanhtoan{
-    padding: 10px 20px;
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 3px;
-    margin: 20px auto;
     cursor: pointer;
+}
+.thanhtoan:hover  {
+    background-color: #3d3d3d;
+}
+.thanhtoan:hover .thanhtoanitem {
+    color: white;
+}
+.thanhtoanitem {
+    text-decoration: none;
+    font-size: larger;
+    color: black;
 }
 .xoa:hover{
     text-decoration: underline;
@@ -380,15 +312,18 @@
 /* -----------------footer-------------- */
 .footer{
     background-color: #3d3d3d;
-    display:flex;
     color: #f1f1f1;
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:   20px;
+    margin-top: 10px;
 }
-.footer1{
-    width: 307px;
-    padding:15px;
+.footer1,.footer2,.footer3,.footer4{
+    padding-left: 15px;
     line-height: 1.6;
+    margin-bottom: 5px;
 }
 .smallline{
     width: 30px;
@@ -422,12 +357,6 @@
     align-items: center;
 }
 
-
-.footer2{
-    padding:15px;
-    width: 307px;
-    line-height: 1.6;
-}
 .guide{
     list-style: none;
     padding-left: 0px;
@@ -442,15 +371,7 @@
 .guidename:hover{
     color: white;
 }
-.footer3{
-    padding:15px;
-    width: 307px;
-    
-}
-.footer4{
-    padding:15px;
-    width: 307px;
-}
+
 /* --------------------chatbox--------------- */
 .chatbox{
     width: 65px;
@@ -550,3 +471,115 @@
     color: black;
     
 }
+/* -----------------container---------------- */
+.container{
+   width: 100%; 
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:50px;
+    width: 90%;
+    margin-left: 65px;
+}
+.main div img {
+    width: 90%;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 76%;
+    width: auto;
+    padding: 16px;
+    margin-top: -70px;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .prev{
+      right:90% ;
+    }
+  /* Position the "next button" to the right */
+  .next {
+    right: 54%;
+    border-radius: 3px 0 0 3px;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+   
+  /* The dots/bullets/indicators */
+  .dotlist{
+    position: absolute;
+    top: 27%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+  }
+  .dot {
+    cursor: pointer;
+    margin: 0 2px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    opacity: 0.5;
+  }
+  .dot:hover{
+      opacity: 1;
+      border: 1px solid black;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  /* ----------------product------------- */
+  .product-star{    
+    padding-top: 10px;
+    color: rgb(235, 188, 100);
+   }
+   .product-priceold{
+    text-decoration-line: line-through;
+    opacity: 0.6;
+    font-size: x-large;
+   }
+   .product-pricenew{
+    padding-left: 10px;
+    font-size: x-large;
+   }
+   .addtocart{
+       width: 90%;
+       height: 33px;
+       background-color: black;
+       font-size: large;
+       color: white;
+       margin-top: 30PX;
+       border-radius: 3px;
+       cursor: pointer;
+   }
+   .col-inner{
+       background-color: #f9f9f9;
+       width: 90%;
+       padding-top: 4px;
+       margin-top: 40px;
+   }
+   .col-inner p{
+    padding-left: 25px !important;
+    border-bottom: solid 1px #f0f0f0;
+    padding-bottom: 8px;
+   
+   }
+   .col-inner p::before{
+    content: "";
+    margin-left: -20px;
+    background: url(https://fridayshopping.vn/wp-content/uploads/2021/06/check@2x.png);
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+    margin-right: 0;
+    float: left;
+    margin-top: 2px;
+   }
+  
+    

@@ -186,7 +186,7 @@ prd.innerHTML = `<div class="imglist">
                    </div>  
                    <div class="product-price" style="padding-top: 30px;">
                     <span class="product-priceold">`+finditem.priceold+`</span> <sup>đ</sup>
-                    <span class="product-pricenew">`+finditem.priceold+`</span> <sup>đ</sup>
+                    <span class="product-pricenew">`+finditem.pricenew+`</span> <sup>đ</sup>
                    </div>
                    <button class="addtocart">THÊM VÀO GIỎ HÀNG</button>
                    <div class="col-inner">
